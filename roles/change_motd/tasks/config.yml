@@ -1,0 +1,10 @@
+  vars:
+    motd: hi ansible
+  name: change motd
+    banner: login
+    text: "{{ motd }}"
+    when: motd == "hello ansible"
+  name: change motd to default
+    banner: login
+    text: "Ansible Managed Node by asheredrosolo"
+    when: motd != "hello ansible"

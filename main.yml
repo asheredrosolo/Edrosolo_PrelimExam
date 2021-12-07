@@ -1,0 +1,32 @@
+---
+- hosts: all
+  become: true
+  pre_tasks:
+
+  - name: Update cache
+    apt:
+      update_cache: yes
+
+- hosts: all
+  become: true
+  name: install python and pip
+  roles:
+    - install_python
+
+- hosts: all
+  become: true
+  name: install java
+  roles:
+    - install_java
+
+- hosts: all
+  become: true
+  name: change motd
+  roles:
+    - change_motd
+
+- hosts: all
+  become: true
+  name: create user
+  roles:
+    - create_user

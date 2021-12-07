@@ -1,0 +1,5 @@
+  name: create user
+  ansible.builtin.user:
+    name: jdc
+    comment: juan dela cruz
+    group: admin
